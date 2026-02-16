@@ -3,7 +3,6 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
-import unusedImportsPlugin from 'eslint-plugin-unused-imports';
 import prettierConfig from 'eslint-config-prettier';
 import { fixupPluginRules } from '@eslint/compat';
 import { Linter } from 'eslint';
@@ -45,8 +44,7 @@ const config: Linter.Config[] = [
     },
     plugins: {
       react: reactPlugin,
-      'react-hooks': fixupPluginRules(reactHooksPlugin),
-      'unused-imports': unusedImportsPlugin
+      'react-hooks': fixupPluginRules(reactHooksPlugin)
     },
     settings: {
       react: {

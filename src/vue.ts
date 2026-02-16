@@ -3,7 +3,6 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import vuePlugin from 'eslint-plugin-vue';
 import prettierConfig from 'eslint-config-prettier';
-import unusedImportsPlugin from 'eslint-plugin-unused-imports';
 import { Linter } from 'eslint';
 
 import { commRule, tsRule, overridesRule } from './comm.js';
@@ -31,7 +30,6 @@ const config: Linter.Config[] = [
       }
     },
     plugins: {
-      'unused-imports': unusedImportsPlugin
     },
     rules: {
       ...commRule,

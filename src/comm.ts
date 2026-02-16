@@ -82,7 +82,16 @@ export const tsRule: Linter.RulesRecord = {
   // 禁止注释或在指令后要求描述@ts-<directive>
   '@typescript-eslint/ban-ts-comment': 0,
   // 禁止未使用的变量
-  '@typescript-eslint/no-unused-vars': 'off',
+  '@typescript-eslint/no-unused-vars': [
+    'warn',
+    {
+      vars: 'all',
+      varsIgnorePattern: '^_',
+      args: 'after-used',
+      argsIgnorePattern: '^_',
+      ignoreRestSiblings: true
+    }
+  ],
   // 要求对导出的函数和类的公共类方法进行显式返回和参数类型。- 默认关闭
   '@typescript-eslint/explicit-module-boundary-types': 'off',
   // 禁止语句，导入语句除外 请改用 ES6 样式导入或导入。var foo = require("foo")import foo = require("foo")
@@ -93,16 +102,6 @@ export const tsRule: Linter.RulesRecord = {
 
 export const commRule: Linter.RulesRecord = {
   // 下面的是JS的配置
-  'unused-imports/no-unused-imports': 'error',
-  'unused-imports/no-unused-vars': [
-    'warn',
-    {
-      vars: 'all',
-      varsIgnorePattern: '^_',
-      args: 'after-used',
-      argsIgnorePattern: '^_'
-    }
-  ],
   indent: 'off',
   // 要求使用模板字面量而非字符串连接
   'prefer-template': 2,

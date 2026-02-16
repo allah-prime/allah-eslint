@@ -8,5 +8,4 @@ declare module '@eslint/compat' {
 }
 
 declare module 'eslint-plugin-react-hooks';
-declare module 'eslint-plugin-unused-imports';
 declare module 'eslint-plugin-react';
