@@ -1,6 +1,6 @@
 {
-  "name": "@allah/eslint",
-  "version": "0.0.1",
+  "name": "@allahjs/eslint",
+  "version": "0.0.2",
   "packageManager": "pnpm@9.1.0",
   "type": "module",
   "description": "My shared ESLint & Prettier configuration for projects",
