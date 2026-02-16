@@ -1,0 +1,17 @@
+# .cnb.yml
+$:
+  vscode:
+    - services:
+        - docker      # 先声明 docker，避免仅预览模式拉取私有镜像失败 [〔5〕]
+        - vscode
+      docker:
+        build: .ide/Dockerfile   # 指定 Dockerfile 路径 [〔2〕]
+        volumes:
+          - /root/.npm:copy-on-write
+          - /root/.yarn:copy-on-write
+          - /root/.pnpm-store:copy-on-write
+          - /root/.cache/node-gyp:copy-on-write
+          - node_modules:copy-on-write   # 这里把 node_modules 挂出去        
+      stages:
+        - name: ls
+          script: ls -al
