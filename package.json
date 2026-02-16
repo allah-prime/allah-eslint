@@ -1,6 +1,7 @@
 {
   "name": "@allah/eslint",
   "version": "0.0.1",
+  "packageManager": "pnpm@9.1.0",
   "type": "module",
   "description": "My shared ESLint & Prettier configuration for projects",
   "repository": "https://github.com/allah-prime/allah-eslint",
