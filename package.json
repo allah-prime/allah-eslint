@@ -1,5 +1,5 @@
 {
-  "name": "@allah/eslint",
+  "name": "@allahjs/eslint",
   "version": "0.0.1",
   "packageManager": "pnpm@9.1.0",
   "type": "module",
